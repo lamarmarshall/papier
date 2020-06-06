@@ -1,0 +1,15 @@
+.list-tile{
+    background-color: white;
+    margin: 10px 10px 10px 10px;
+}
+body{
+    background : whitesmoke;
+}
+
+.width-45{
+    max-width: 66%;
+}
+
+.featured-image{
+    margin: 15px 15px 15px 15px;
+}

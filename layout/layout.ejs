@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<%= config.lang %>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= config.title %></title>
+    <%- partial('_partial/head') %>
 </head>
 <body>
+    
+    <%- partial('_partial/header', {logo: config.logo}) %>
+
     <%- body %>
 </body>
 </html>

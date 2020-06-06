@@ -1,0 +1,21 @@
+        <div class="columns is-one-quarter">
+            <div class="column ">
+          <div class="entry-thumbnail">
+            <a href="<%- url_for(post.path) %>"><img  height="250" src="<%- post.featured_image %>" class="featured-image" alt=""></a>
+          </div>
+        </div>
+  
+
+    
+            
+     
+           
+        
+        <div class="column " style="margin: 10px 10px 10px 10px; padding: 10px 10px 10px 10px;">
+            <%- truncate(strip_html(post.content), {length: 350, omission: '...'}) %>
+     
+          <p class="article-more-link">
+            <a href="<%- url_for(post.path) %>#more"><%= __('read_more') %></a>
+          </p>
+        </div>
+    </div>

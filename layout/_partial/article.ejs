@@ -1,0 +1,81 @@
+<div class="container width-45">
+
+<article id="<%= post.layout %>-<%= post.slug %>" <% if (!index && is_post() && ( theme.post_catalog.enable || theme.post_sidebar.enable )){ %>style="width: 45%; float:left;"<% } %> class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost" >
+  
+  <div id="articleInner" class="list-tile">
+    <%- partial('post/gallery') %>
+    <% if (post.link || post.title){ %>
+      <header class="article-header">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+      </header>
+    <% } %>
+    <div class="article-meta">
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+    
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      <% if (page.featured_image){ %>
+        <img src="<%- page.featured_image %>">
+      <% } %>
+      <% if (post.excerpt && index){ %>
+       
+        <%- partial('excerpt', {post: post, index: false}) %>
+
+      <% } else { %>
+        <% if(!index) { %>
+          <br/>
+          <div class="sharethis-inline-share-buttons"></div>
+        <% } %>
+        <%- post.content %>
+      <% } %>
+    </div>
+
+   
+    <% if (!index){ %>
+      <%- partial('post/nav') %>
+    <% } %>
+    <% if(!index && is_post() && post.resources   ) {%> 
+      <div class="well">
+        <h2 class="resources"><%= __('resources') %></h2>
+      <%  post.resources.forEach( function(p) {%>
+        <a href=<%= p %> rel="nofollow"><%= p %></a>
+      <% }) %>
+    </div>
+
+    <% } %>
+
+    <footer class="entry-meta entry-footer">
+      <%- partial('post/category') %>
+      <%- partial('post/tag') %>
+      <% if (!index && theme.donate.enable){ %>
+        <%- partial('donate') %>
+      <% } %>
+            
+      <% if (!index && post.comments && (theme.gentie_productKey || theme.duoshuo_shortname || theme.disqus_shortname || theme.uyan_uid || theme.wumii || theme.livere_shortname || theme.gitment.owner)){ %>
+        <%- partial('comment') %>
+      <% } %>
+    </footer>
+  </div>
+
+</article>
+
+
+<!-- Table of Contents -->
+<% if (!index && is_post() && theme.post_catalog.enable){ %>
+  <aside id="sidebar">
+    <div id="toc" class="toc-article" style="overflow-y: scroll; max-width: 28%;">
+    <strong class="toc-title"><%= __('contents') %></strong>
+    <% if (toc(post.content) != ""){ %>
+      <%- toc(post.content, { "class": "nav" }) %>
+    <% } else { %>
+      <ol class="nav"><%= __('none') %></ol>
+    <% } %>
+    </div>
+  
+  </aside>
+<% } else { %>
+    <% if (!index && is_post() && theme.post_sidebar.enable){ %>
+      <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+    <% } %>
+<% } %>
+</div>
