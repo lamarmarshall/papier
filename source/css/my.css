@@ -1,0 +1,31 @@
+.resources{
+    font-size: large;
+    color: white;
+}
+
+.well{
+    background-color: #2b633a;
+    color: white;
+}
+
+.site-footer {
+    background-color: white;
+}
+
+#container {
+    max-width: 53%;
+   margin: auto;
+   padding-top: 20px;
+}
+
+@media (max-width: 500px) {
+    #container {
+        max-width: 90%;
+       margin: auto;
+       padding-top: 20px;
+    }
+
+    .entry-thumbnail {
+        width: 100%;
+    }
+  }

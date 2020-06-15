@@ -1,0 +1,108 @@
+.list-tile{
+    background-color: white;
+    margin: 10px 10px 10px 10px;
+}
+body{
+    background : whitesmoke;
+}
+
+.width-45{
+    max-width: 66%;
+}
+
+.featured-image{
+    margin: 15px 15px 15px 15px;
+}
+
+h1.thumb {
+    text-align: center;
+
+}
+
+.article-title{
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    color: green;
+    
+    
+  
+}
+.article-header h1{
+    text-align: start;
+    padding-left: 5px;
+}
+.article-meta{
+    text-align: start;
+    padding-left: 25px;
+}
+.article-more-link {
+    margin-top: 10px;
+}
+
+.article-more-link a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: thin green solid;
+    padding: 5px;
+    
+    color: green;
+    
+}
+.article-entry img{
+    max-width: 80%;
+}
+.entry-thumbnail img{
+    max-width: 100%;
+}
+
+.post-content p{
+    width: 80%;
+}
+.post-content br{
+    display: none;
+}
+
+br.show{
+    display: block;
+    
+}
+b{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.navbar-menu a{
+    width: 100%;
+    text-align: right;
+} 
+.navlink{
+    font-weight: bolder;
+    color: green;
+    padding-left: 45px;
+    vertical-align: middle;
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+.resources{
+    font-size: large;
+    color: white;
+}
+
+.well{
+    background-color: #2b633a;
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .width-45{
+        max-width: 95%;
+    }
+    .featured-image{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .article-meta{
+        text-align: center;
+    }
+  }

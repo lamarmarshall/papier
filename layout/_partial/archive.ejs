@@ -27,11 +27,15 @@
   <% } %>
 <% } %>
 <% if (page.total > 1){ %>
-  <nav id="page-nav">
-    <% var prev_text = __('prev');var next_text = __('next')%>
+  <div class="container width-45">
+  <nav id="page-nav" class="pagination" role="navigation" aria-label="pagination">
+    <% 
+      var prev_text =  __('prev') ;
+      var next_text =   __('next')%>
     <%- paginator({
       prev_text: prev_text,
       next_text: next_text
     }) %>
   </nav>
+</div>
 <% } %>

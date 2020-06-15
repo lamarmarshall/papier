@@ -5,8 +5,11 @@
 # Header Menu
 menu:
   Home: /
-  Archives: archives
-  Language: languages
+  News: News
+  Recipies: Recipes
+  Reviews: Reviews
+  Video: Video
+  Language: Languages
   #Categories: categories
   #Tags: tags
   #About: about
@@ -19,7 +22,7 @@ keywords: ""
 
 # Put your favicon.ico into `hexo-site/themes/hiero/source/` directory.
 favicon: css/images/favicon.ico
-logo: "logo.png"
+logo: "/logo.png"
 
 
 # AboutPage background
@@ -135,3 +138,4 @@ facebook_sdk:
   fb_admin:     #<user_id>
   like_button:  #true
   webmaster:    #true
+
