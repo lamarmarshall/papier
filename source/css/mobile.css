@@ -1,0 +1,29 @@
+@media only screen and ( max-width: 600px) {
+    .width-45{
+        max-width: 95%;
+    }
+    .featured-image{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .article-meta{
+        text-align: center;
+    }
+    .container{
+        width: 100%;
+    }
+    .follow-div a{
+        margin-right: 10px;
+    }
+    .article-entry img {
+        max-width: 90%;
+    }
+
+    .post-content p {
+        width: 95%;
+    }
+   
+    body > div.container > div:nth-child(4) > div {
+        max-width: 100%;
+    }
+}

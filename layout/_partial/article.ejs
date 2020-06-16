@@ -1,4 +1,7 @@
 <div class="container width-45">
+  <% if(!index && is_post() ){ %>
+    <div id="notindex"></div>
+  <% } %>
 
 <article id="<%= post.layout %>-<%= post.slug %>" <% if (!index && is_post() && ( theme.post_catalog.enable || theme.post_sidebar.enable )){ %>style="width: <% if(!index){ %> 100% <% }else {%> 45% <% } %>; float:left;"<% } %> class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost" >
   

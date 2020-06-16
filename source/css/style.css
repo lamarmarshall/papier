@@ -6,6 +6,9 @@ body{
     background : whitesmoke;
 }
 
+.white-back{
+    background-color:white;
+}
 .width-45{
     max-width: 66%;
 }
@@ -94,15 +97,29 @@ b{
     color: white;
 }
 
-@media only screen and (max-width: 600px) {
-    .width-45{
-        max-width: 95%;
-    }
-    .featured-image{
-        width: 100%;
-        margin-left: 0px;
-    }
-    .article-meta{
-        text-align: center;
-    }
-  }
+.fb-page, .fb-group, .instagrambanner{
+    margin: 50px 0px 50px 0px;
+    text-align: center;
+    width: 100%;
+}
+
+.fb-like{
+    padding-left: 60px;
+}
+
+.instagrambanner {
+    padding: 40px 40px 40px 40px;
+}
+
+.follow-div{
+    margin-top: 10px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+.follow-div a{
+    margin-right: 75px;
+}
+
+
+
